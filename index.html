@@ -1,0 +1,135 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>KYC form</title>
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--<form action="FormSubmit.php" method="post">-->
+  <!--名字: <input type="text" name="Field1">-->
+  <!--年龄: <input type="text" name="Field2">-->
+  <!--<input type="submit" value="提交">-->
+<!--</form>-->
+<div class="container">
+  <div class="row">
+    <div class="header">
+    </div>
+    <div class="">
+      <!-- Edit Customer Form -->
+      <form class="" role="form" action="FormSubmit.php" method="post" enctype="multipart/form-data">
+        <div class="row">
+          <!--Email Address-->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label class="control-label must-fill">Email Address</label>
+              <input type="text" class="form-control" name="Field1">
+            </div>
+          </div>
+          <!-- First Name -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label class="control-label">First Name</label>
+              <input type="text" class="form-control" name="Field2">
+            </div>
+          </div>
+          <!-- Last Name -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label class="control-label">Last Name</label>
+              <input type="text" class="form-control" name="Field17">
+            </div>
+          </div>
+          <!-- Nationality -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label>Nationality</label>
+              <!--<input type="text" class="form-control" name="Field4">-->
+              <select class="form-control" name="Field4">
+                <option>Afghan</option>
+                <option>Albanian</option>
+                <option>Algerian</option>
+                <option>American</option>
+                <option>Andorran</option>
+              </select>
+            </div>
+          </div>
+          <!-- Certificate type -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label>Certificate type</label>
+              <!--<input type="text" class="form-control" name="Field5">-->
+              <label>
+                <input type="radio" name="Field5" value="Passport">Passport
+              </label>
+              <label>
+                <input type="radio" name="Field5" value="ID">ID
+              </label>
+              <label>
+                <input type="radio" name="Field5" value="Driving License">Driving License
+              </label>
+            </div>
+          </div>
+          <!-- Document number -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label>Document number</label>
+              <input type="text" class="form-control" name="Field6">
+            </div>
+          </div>
+          <!-- The front page of your ID -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>The front page of your ID</label>
+              <input type="file" class="form-control" name="Field8">
+            </div>
+          </div>
+          <!-- The back page of your ID -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>The back page of your ID</label>
+              <input type="file" class="form-control" name="Field9">
+            </div>
+          </div>
+          <!-- The photo of yourself with the front page of your ID -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>The photo of yourself with the front page of your ID</label>
+              <input type="file" class="form-control" name="Field10">
+            </div>
+          </div>
+          <!-- Your ETH Address -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>Your ETH Address</label>
+              <input type="text" class="form-control" name="Field12">
+            </div>
+          </div>
+          <!-- The amount of ETH you would like to invest -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>The amount of ETH you would like to invest</label>
+              <input type="text" class="form-control" name="Field14">
+            </div>
+          </div>
+        </div>
+        <!-- Actions -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
