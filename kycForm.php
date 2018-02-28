@@ -546,7 +546,7 @@ $post['Field9']  = $_FILES['Field9'];   # The back page of your ID
 $post['Field10'] = $_FILES['Field10'];  # The photo of yourself with the front page of your ID
 $post['Field12'] = $_POST['Field12'];   # Your ETH Address
 $post['Field14'] = $_POST['Field14'];   # The amount of ETH you would like to invest
-var_dump($post);exit;
+
 //setcookie('post_data', json_encode($post), time()+3600);
 
 #check all post data
