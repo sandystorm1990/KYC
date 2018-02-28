@@ -546,8 +546,12 @@ $post['Field9']  = $_FILES['Field9'];   # The back page of your ID
 $post['Field10'] = $_FILES['Field10'];  # The photo of yourself with the front page of your ID
 $post['Field12'] = $_POST['Field12'];   # Your ETH Address
 $post['Field14'] = $_POST['Field14'];   # The amount of ETH you would like to invest
-
 //setcookie('post_data', json_encode($post), time()+3600);
+#首次加载页面（get方式）
+if (empty($_POST) || empty($_FILES)) {
+    #页面跳转
+    exit;
+}
 
 #check all post data
 foreach ($post as $key => $value) {
@@ -610,6 +614,8 @@ $resultStatus = curl_getinfo($curl);
 if($resultStatus['http_code'] == 200 || $resultStatus['http_code'] == 201) {
     # 删除表单数据
     unset($_POST);
+    unset($_FILES);
+    unset($post);
     //setcookie('post_data', time()-3600);
     #删除文件
     @unlink($post_data['Field8']);
@@ -619,6 +625,10 @@ if($resultStatus['http_code'] == 200 || $resultStatus['http_code'] == 201) {
     //echo json_encode($response);
     //echo json_encode($resultStatus);
     curl_close($curl);
+    #页面跳转
+    echo "<script type='text/javascript'>";
+    echo "window.location.href='kycForm.php'";
+    echo "</script>";
     
 } else {
     //echo json_encode($response);
