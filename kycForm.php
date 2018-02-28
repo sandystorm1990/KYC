@@ -440,7 +440,7 @@
             <a href="javascript:;" class="file" id="btn8">Choose File
               <input type="file" name="Field8" id="">
             </a>
-            <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'No file chosen'; ?></span>
+            <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
 <!--            <input type="file" class="form-control input-inner" name="Field8" value="--><?php //echo $_FILES['Field8'] ?><!--">-->
           </div>
           <!-- The back page of your ID -->
@@ -451,7 +451,7 @@
             <a href="javascript:;" class="file" id="btn9">Choose File
               <input type="file" name="Field9" id="">
             </a>
-            <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'No file chosen'; ?></span>
+            <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
 <!--            <input type="file" class="form-control input-inner" name="Field9" value="--><?php //echo $_FILES['Field9'] ?><!--">-->
           </div>
           <!-- The photo of yourself with the front page of your ID -->
@@ -462,7 +462,7 @@
             <a href="javascript:;" class="file" id="btn10">Choose File
               <input type="file" name="Field10" id="">
             </a>
-            <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'No file chosen'; ?></span>
+            <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
 <!--            <input type="file" class="form-control input-inner" name="Field10" value="--><?php //echo $_FILES['Field10'] ?><!--">-->
           </div>
           <!-- Your ETH Address -->
@@ -490,7 +490,7 @@
 <script>
   $("#btn8").on("change","input[type='file']",function(){
     var filePath=$(this).val();console.log(filePath);
-    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1){
+    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1 || filePath.indexOf('gif') != -1){
       $("#file8").html("").hide();
       var arr=filePath.split('\\');
       var fileName=arr[arr.length-1];console.log(fileName);
@@ -503,7 +503,7 @@
   });
   $("#btn9").on("change","input[type='file']",function(){
     var filePath=$(this).val();console.log(filePath);
-    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1){
+    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1 || filePath.indexOf('gif') != -1){
       $("#file9").html("").hide();
       var arr=filePath.split('\\');
       var fileName=arr[arr.length-1];console.log(fileName);
@@ -516,7 +516,7 @@
   });
   $("#btn10").on("change","input[type='file']",function(){
     var filePath=$(this).val();console.log(filePath);
-    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1){
+    if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1 || filePath.indexOf('jpeg') != -1 || filePath.indexOf('gif') != -1){
       $("#file10").html("").hide();
       var arr=filePath.split('\\');
       var fileName=arr[arr.length-1];console.log(fileName);
