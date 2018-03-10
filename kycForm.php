@@ -4,12 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>KYC form</title>
-  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     
 <!--  <link rel="stylesheet" href="./css/main.css">-->
@@ -305,11 +301,6 @@
 </head>
 <body>
 
-<!--<form action="FormSubmit.php" method="post">-->
-<!--名字: <input type="text" name="Field1">-->
-<!--年龄: <input type="text" name="Field2">-->
-<!--<input type="submit" value="提交">-->
-<!--</form>-->
 <div class="container" id="app">
   <div class="row">
     <div class="header">
