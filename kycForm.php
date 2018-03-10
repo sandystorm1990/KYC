@@ -50,7 +50,7 @@
 
     .form-item-label {
       color: #FFFFFF;!important;
-      width:25%;
+      /*width:25%;*/
       text-align: left;
     }
     .radio-label, .select-option {
@@ -74,7 +74,7 @@
     .radio-list {
       cursor:pointer;
     }
-    .titel-required {
+    .title-required {
       color: #f56c6c;
     }
     .file {
@@ -310,7 +310,7 @@
 <!--年龄: <input type="text" name="Field2">-->
 <!--<input type="submit" value="提交">-->
 <!--</form>-->
-<div class="" id="app">
+<div class="container" id="app">
   <div class="row">
     <div class="header">
       <div class="header">
@@ -337,35 +337,31 @@
       <form class="" role="form" action="kycForm.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <!--Email Address-->
-          <div class="">
-            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-              <span class="titel-required">*</span> Email Address
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> Email Address
             </label>
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
-              <input type="text" class="input-inner form-control" name="Field1" value="<?php echo $_POST['Field1'] ?>">
-            </div>
+            <input type="text" class="input-inner form-control" name="Field1" value="<?php echo $_POST['Field1'] ?>">
           </div>
           <!-- First Name -->
-          <div class="form-group">
-            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-              <span class="titel-required">*</span> First Name
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> First Name
             </label>
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
-              <input type="text" class="input-inner form-control" name="Field2" value="<?php echo $_POST['Field2'] ?>">
-            </div>
+            <input type="text" class="input-inner form-control" name="Field2" value="<?php echo $_POST['Field2'] ?>">
           </div>
           <!-- Last Name -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span> Last Name
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> Last Name
+            </label>
             <input type="text" class="input-inner form-control " name="Field17" value="<?php echo $_POST['Field17'] ?>">
           </div>
           <!-- Nationality -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span> Nationality
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> Nationality
+            </label>
             <select class="input-inner form-control select-option" name="Field4">
                 <?php foreach ($nations as $nation) { if($nation == $_POST['Field4']){ ?>
                   <option value="<?php echo $nation ?>" selected><?php echo $nation ?></option>
@@ -374,114 +370,123 @@
                 <?php }} ?>
             </select>
           </div>
+          
           <!-- Certificate type -->
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="form-group">
-              <label class="form-item-label">
-                <span class="titel-required">*</span> Certificate type
+              <label class="control-label form-item-label">
+                <span class="title-required">*</span> Certificate type
               </label>
-              <!--<input type="text" class="form-control" name="Field5">-->
-                <?php if ($_POST['Field5'] =='Passport') { ?>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Passport" checked>Passport
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="ID">ID
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
-                  </label>
-                <?php }elseif($_POST['Field5'] =='ID'){ ?>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
-                  </label>
-                  
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="ID" checked>ID
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
-                  </label>
-                <?php }elseif($_POST['Field5'] =='Driving License'){ ?>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="ID">ID
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Driving License" checked>Driving License
-                  </label>
-                <?php } else{ ?>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="ID">ID
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
-                  </label>
-                <?php } ?>
+              <div>
+                  <?php if ($_POST['Field5'] =='Passport') { ?>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Passport" checked>Passport
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="ID">ID
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
+                    </label>
+                  <?php }elseif($_POST['Field5'] =='ID'){ ?>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
+                    </label>
+
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="ID" checked>ID
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
+                    </label>
+                  <?php }elseif($_POST['Field5'] =='Driving License'){ ?>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="ID">ID
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Driving License" checked>Driving License
+                    </label>
+                  <?php } else{ ?>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Passport">Passport
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="ID">ID
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" class="radio-list" name="Field5" value="Driving License">Driving License
+                    </label>
+                  <?php } ?>
+              </div>
             </div>
           </div>
           <!-- Document number -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span> Document number
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> Document number
+            </label>
             <input type="text" class="form-control input-inner" name="Field6" value="<?php echo $_POST['Field6'] ?>">
           </div>
           <!-- The front page of your ID -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span> The front page of your ID
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
-            <a href="javascript:;" class="file" id="btn8">Choose File
-              <input type="file" name="Field8" id="">
-            </a>
-            <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
-<!--            <input type="file" class="form-control input-inner" name="Field8" value="--><?php //echo $_FILES['Field8'] ?><!--">-->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> The front page of your ID
+            </label>
+            <div>
+              <a href="javascript:;" class="file" id="btn8">选择文件
+                <input type="file" name="Field8" id="">
+              </a>
+              <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+            </div>
           </div>
+          
           <!-- The back page of your ID -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span> The back page of your ID
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
-            <a href="javascript:;" class="file" id="btn9">Choose File
-              <input type="file" name="Field9" id="">
-            </a>
-            <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
-<!--            <input type="file" class="form-control input-inner" name="Field9" value="--><?php //echo $_FILES['Field9'] ?><!--">-->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span> The back page of your ID
+            </label>
+            <div>
+              <a href="javascript:;" class="file" id="btn9">选择文件
+                <input type="file" name="Field9" id="">
+              </a>
+              <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+            </div>
           </div>
+          
           <!-- The photo of yourself with the front page of your ID -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label"><span class="titel-required">*</span>
-            The photo of yourself with the front page of your ID
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
-            <a href="javascript:;" class="file" id="btn10">Choose File
-              <input type="file" name="Field10" id="">
-            </a>
-            <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
-<!--            <input type="file" class="form-control input-inner" name="Field10" value="--><?php //echo $_FILES['Field10'] ?><!--">-->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label"><span class="title-required">*</span>
+              The photo of yourself with the front page of your ID
+            </label>
+            <div>
+              <a href="javascript:;" class="file" id="btn10">选择文件
+                <input type="file" name="Field10" id="">
+              </a>
+              <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+            </div>
           </div>
+          
           <!-- Your ETH Address -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">
-            <span class="titel-required">*</span>
-            Your ETH Address
-          </label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="control-label form-item-label">
+              <span class="title-required">*</span>
+              Your ETH Address
+            </label>
             <input type="text" class="form-control input-inner" name="Field12" value="<?php echo $_POST['Field12'] ?>">
           </div>
+          
           <!-- The amount of ETH you would like to invest -->
-          <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 form-item-label">The amount of ETH you would like to invest</label>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-div">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-div">
+            <label class="conrol-label form-item-label">The amount of ETH you would like to invest</label>
             <input type="text" class="form-control input-inner" name="Field14" value="<?php echo $_POST['Field14'] ?>">
           </div>
         </div>
         <!-- Actions -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <input type="submit" class="btn btn-primary" value="Submit">
+          <input type="submit" class="btn btn-primary btn-lg" value="Submit">
         </div>
       </form>
     </div>
