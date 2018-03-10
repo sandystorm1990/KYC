@@ -309,6 +309,13 @@
       </div>
     </div>
     <div class="content">
+      <?php if (!empty($_GET['tag'])) { ?>
+      <div class="title">
+        <h1>您的KYC信息已经提交并正在审核中。</h1>
+        <p>您将在1～3天内通过电子邮件收到最终结果。
+          如果有任何疑问，请通过 xxx@qq.com与我们联系</p>
+      </div>
+    <?php } else { ?>
       <div class="title">
         <h1>KYC portal</h1>
         <p>Dear GTS Token Sale Participant,</p>
@@ -480,6 +487,7 @@
           <input type="submit" class="btn btn-primary btn-lg" value="Submit">
         </div>
       </form>
+    <?php } ?>
     </div>
   </div>
 </div>
@@ -622,10 +630,11 @@ if($resultStatus['http_code'] == 200 || $resultStatus['http_code'] == 201) {
     //echo json_encode($resultStatus);
     curl_close($curl);
     #页面跳转
+    $url = 'kycForm.php?tag=success';
     echo "<script type='text/javascript'>";
-    echo "window.location.href='kycForm.php'";
+    echo "window.location.href='$url'";
     echo "</script>";
-    
+    exit;
 } else {
     //echo json_encode($response);
     echo 'Call Failed ';//.json_encode($resultStatus);
