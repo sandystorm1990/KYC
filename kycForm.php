@@ -436,10 +436,10 @@
               <span class="title-required">*</span> The front page of your ID
             </label>
             <div>
-              <a href="javascript:;" class="file" id="btn8">选择文件
+              <a href="javascript:;" class="file" id="btn8">Choose File
                 <input type="file" name="Field8" id="">
               </a>
-              <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+              <span id="file8" class="file-name"><?php echo $_FILES['Field8']['name']?$_FILES['Field8']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
             </div>
           </div>
           
@@ -449,10 +449,10 @@
               <span class="title-required">*</span> The back page of your ID
             </label>
             <div>
-              <a href="javascript:;" class="file" id="btn9">选择文件
+              <a href="javascript:;" class="file" id="btn9">Choose File
                 <input type="file" name="Field9" id="">
               </a>
-              <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+              <span id="file9" class="file-name"><?php echo $_FILES['Field9']['name']?$_FILES['Field9']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
             </div>
           </div>
           
@@ -462,10 +462,10 @@
               The photo of yourself with the front page of your ID
             </label>
             <div>
-              <a href="javascript:;" class="file" id="btn10">选择文件
+              <a href="javascript:;" class="file" id="btn10">Choose File
                 <input type="file" name="Field10" id="">
               </a>
-              <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'未选择任何文件(jpg,jpeg,png,gif)'; ?></span>
+              <span id="file10" class="file-name"><?php echo $_FILES['Field10']['name']?$_FILES['Field10']['name']:'No file chosen(jpg,jpeg,png,gif)'; ?></span>
             </div>
           </div>
           
