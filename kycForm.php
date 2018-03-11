@@ -62,10 +62,10 @@
       border: 1px solid #3F4A54;
     }
 
-    .no-file-tip {
-      margin-left: 15px;
-      font-size: 15px;
-      color: #758EA5;
+    .danger-info {
+      text-align: center;
+      font-size: 24px;
+      color: #000;
     }
     .radio-list {
       cursor:pointer;
@@ -300,7 +300,7 @@
   </script>
 </head>
 <body>
-
+<p class="bg-danger danger-info" id="error-msg"></p>
 <div class="container" id="app">
   <div class="row">
     <div class="header">
@@ -562,13 +562,18 @@ foreach ($post as $key => $value) {
     #验证文件完整性
     if ($key == 'Field8'|| $key == 'Field9' || $key =='Field10') {
         if (empty($value['name'])) {
-            echo $key.' can not be empty!';
+            echo "<script type='text/javascript'>";
+            echo '$("#error-msg").html("'.$key. ' can not be empty!");';
+            echo "</script>";
             return false;
         }
     }
     #验证其他字段
     if ($key != 'Field14' && empty($value)) {
-        echo $key.' can not be empty!';
+        echo "<script type='text/javascript'>";
+        echo '$("#error-msg").html("'.$key. ' can not be empty!");';
+        echo "</script>";
+        //echo $key.' can not be empty!';
         return false;
     } else {
         # 保存cookie 页面是get方式，submit是post,为了保留之前的表单信息，页面采用了$_POST变量进行获取
@@ -636,7 +641,9 @@ if($resultStatus['http_code'] == 200 || $resultStatus['http_code'] == 201) {
     echo "</script>";
     exit;
 } else {
-    //echo json_encode($response);
-    echo 'Call Failed ';//.json_encode($resultStatus);
+    echo "<script type='text/javascript'>";
+    echo '$("#error-msg").html("Call Failed!");';
+    echo "</script>";
+    //echo 'Call Failed ';//.json_encode($resultStatus);
     curl_close($curl);
 }
