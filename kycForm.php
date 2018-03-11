@@ -51,10 +51,10 @@
     }
     .radio-label, .select-option {
       color: #FFFFFF;
-      margin-right: 22px;
+      margin-right: 39px;
     }
     .form-div {
-      margin-bottom: 22px;
+      margin-bottom: 39px;
     }
     .input-inner {
       background: #2C2D34;
@@ -587,9 +587,9 @@ $post_data = [];
 
 foreach ($post as $key => $value) {
     if ($key == 'Field8'|| $key == 'Field9' || $key =='Field10') {
-        move_uploaded_file($value["tmp_name"], "" . $value["name"]);
+        move_uploaded_file($value["tmp_name"], './kyc/' . $value["name"]);
         
-        $post_data[$key] = curl_file_create($value['name'], mime_content_type($value['name']), $value['name']);
+        $post_data[$key] = curl_file_create('./kyc/'.$value['name'], mime_content_type('./kyc/'.$value['name']), './kyc/'.$value['name']);
         //@unlink($value['name']);
     } else {
         $post_data[$key] =$value;
@@ -612,6 +612,7 @@ curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
